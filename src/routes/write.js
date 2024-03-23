@@ -6,7 +6,7 @@ import axios from 'axios';
 import cookie from 'react-cookies';
 
 const date = new Date();
-const year = date.getFullYear(), month = date.getMonth() + 1, day = date.getDay();
+const year = date.getFullYear(), month = date.getMonth() + 1, day = date.getDate();
 const dateString = `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`;
 export default function Write() {
     const [content, setContent] = useState('');
