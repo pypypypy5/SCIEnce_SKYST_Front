@@ -6,20 +6,19 @@ import axios from 'axios';
 import cookie from 'react-cookies';
 import { useNavigate } from 'react-router-dom';
 
-export default function Login() {
+export default function Signup() {
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
     const nav = useNavigate();
-    const handleLogin = async () => {
+
+    const handleRegister = async () => {
         // 여기서 서버로 id와 password를 전송하는 로직을 작성하세요.
-        await axios.post('http://localhost:8888/auth/login', {username: id, password: password}).then((res)=>{
-            cookie.save('accesstoken', res.data.token);
-            alert('로그인에 성공했습니다!');
-            window.location.reload();
-            nav('/')
+        await axios.post('http://localhost:8888/auth/register', {username: id, password: password}).then((res)=>{
+            alert('가입에 성공했습니다!');
+            nav('/login');
         }).catch((e)=>{
             console.error(e);
-            alert('로그인에 실패했습니다!');
+            alert('가입에 실패했습니다!');
         })
     };
 
@@ -27,12 +26,12 @@ export default function Login() {
         <div>
             <Header />
             <div className="login_box">
-                <h1>로그인</h1>
+                <h1>회원가입</h1>
                 <br />
                 <br />
             </div>
             <div className="guide">
-                필명과 비밀번호를 입력하고 로그인하세요.
+                필명과 비밀번호를 입력하고 가입하세요.
             </div>
             <Form>
                 <div className="nickname">
@@ -55,7 +54,7 @@ export default function Login() {
                     </Form.Field>
                 </div>
                 <div className='login-button'>
-                <Button onClick={handleLogin} className='login-button'>로그인</Button>
+                <Button onClick={handleRegister} className='login-button'>회원가입</Button>
                 </div>
             </Form>
         </div>

@@ -1,0 +1,39 @@
+.frontLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    width: 100%;
+}
+
+.frontQuote {
+    font-size: 33px;
+    line-height: 1.5;
+    margin-left: max(30%, 75px);
+    margin-right: max(30%, 75px);
+    text-align: center;
+}
+
+.frontButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.frontButton {
+    font-size: 30px;
+}
+
+.frontSlide {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.frontShape {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}

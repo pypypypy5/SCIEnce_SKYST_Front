@@ -1,36 +1,43 @@
 .rectangle-read {
-    padding: 35px;
-    margin-left: max(1%, 10px);
-    margin-right: max(1%, 10px);
-    border-radius: 30px;
-    background-color: #D9D9D9;
-    opacity: 100%;
-    z-index: 1;
-    justify-content: center;
-    align-items: center;
-  }
-
-.center-read {
-  margin-top: 75px;
-  margin-left: max(25px, 10%);
-  margin-right: max(25px, 10%);
-  display: grid; /* 요소를 인라인 블록으로 표시 */
-  grid-template-columns: 50px auto 50px;  
+  padding: 35px;
+  margin-left: max(1%, 10px);
+  margin-right: max(1%, 10px);
+  border-radius: 30px;
+  background-color: #D9D9D9;
+  opacity: 100%;
+  z-index: 1;
+  justify-content: center;
   align-items: center;
 }
 
-.center-read img {
-  vertical-align: middle;
+.center-read {
+margin-top: 75px;
+margin-left: max(25px, 10%);
+margin-right: max(25px, 10%);
+display: grid; /* 요소를 인라인 블록으로 표시 */
+grid-template-columns: 50px auto 50px;  
+align-items: center;
 }
-  .topic {
-    font-size: 36px;
-    margin-bottom: max(5%, 30px);
-    
-  }
 
-  .main-content {
-    font-size: 30px;
-    margin: 30px;
-    line-height: 1.5;
-  }
+.center-read img {
+vertical-align: middle;
+}
+.topic {
+  font-size: 36px;
+  margin-top: 1px;
+  /* margin-bottom: max(5%, 30px); */
   
+}
+
+.main-content {
+  font-size: 30px;
+  margin: 30px;
+  line-height: 1.5;
+}
+
+.nextButton {
+  margin: auto;
+  margin-top: 75px;
+  justify-content: center;
+  display: flex;
+}

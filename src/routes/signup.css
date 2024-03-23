@@ -1,4 +1,7 @@
-.login_box{
+
+
+
+.signup_box{
     width: 160px;
     height: 53px;
 
@@ -46,6 +49,7 @@
 /* 필명과 비밀번호를 설정하고 가입하세요. */
 
 .guide{
+    /* 필명과 비밀번호를 설정하고 가입하세요. */
 
 width: 336px;
 height: 30px;
@@ -86,7 +90,8 @@ margin: auto;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: auto;
-    margin-top: 100px
+    margin-top: 100px;
+    margin-bottom: 150px;
 }
 
 .password{
@@ -110,12 +115,13 @@ margin: auto;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: auto;
-    margin-top: 100px
+    margin-top: 100px;
+    margin-bottom: 150px;
 
 }
 
 .login-button {
-    margin-top: 100px;
+    margin-top: 10px;
     display: grid;
     justify-content: center;
 }
