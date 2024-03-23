@@ -5,6 +5,7 @@ import 'semantic-ui-css/semantic.min.css';
 
 import Main from './routes/main.js';
 import Read from './routes/read.js';
+import Header from './component/Header.js';
 
 
 
