@@ -2,7 +2,7 @@ import React from 'react';
 import './profile.css'
 import Header from "../component/Header";
 
-export default function profile() {
+export default function Profile() {
 
 
     return (
