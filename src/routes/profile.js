@@ -1,30 +1,48 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './profile.css'
 import Header from "../component/Header";
+import { useEffect } from 'react';
 import axios from 'axios';
-
+import '../Forest.jpg';
+import { Button } from 'semantic-ui-react';
+import cookie from 'react-cookies';
 export default function Profile() {
-    const [post, setPost] = useState(null);
     
-    
+    const style = {
+        bg:{
+            background: 'Forest.jpg'
+        }
+    }
+    let data;
+    // useEffect(()=>{
+    //     const fetchData = async () => {
+    //         data = await axios.get('http://localhost:8888/posts/dashboard', {username: 'qdrptd'}).then((res)=>{
+                
+    //             return res.data;
+    //         })
+    //         console.log(data);
+    //     }
+    //     fetchData();
+    // }, []);
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios.post('http://localhost:8888/posts/dashboard', {username: 'qdrptd'})
-            setPost(response.data.data)
+            const response = await axios.post('http://localhost:8888/posts/dashboard', {body: {username: 'qdrptd'}})
+            const data = response.data;
+            console.log(data);
           } catch (error) {
-            console.error('Error fetching data:', error);
+            console.error(error);
           }
         };
     
-        fetchData(); // Call the async function
+        fetchData();
       }, []);
+    console.log(data);
     return (
         <div>
             <Header></Header>
-            {
-                !post?<div>1</div>:
-            <div>
+            {data.map((d) => {d.title})}
+            <Button onClick={()=>{alert(data)}}/>
             <div classname = 'Mryourwriting'>
                 Username님, 당신의 글귀들은 지금까지 
                 {/* !!!!!!!!!!유저네임 불러오는 로직 추가 필요!!!!!!!!!!*/}
@@ -46,18 +64,10 @@ export default function Profile() {
             </div>
 
 
-            {
-                    post.map((data)=>{
-                        return(
-                            <div>{data.topic}</div>
-                        )
-                    })
-                }
             <div classname = 'ThanksGave'>
                 감사를 남긴 글들
             </div>
-            </div>
-            }
+
             <div classname = 'WritingBox1'></div>{/*글박스 불러오는 로직 추가필요*/}
             <div classname = 'WritingBox2'></div>
 
@@ -71,8 +81,7 @@ export default function Profile() {
             <div classname = 'Group7'></div>
             <div classname = 'Group6'></div>
             <div classname = 'Group2'></div>
-            <div classname = 'Forest1'></div>
-            
+            <div classname = 'Forest1' style={style.bg}></div>
         </div>
     );
 }
