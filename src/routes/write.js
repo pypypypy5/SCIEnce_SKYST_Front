@@ -26,28 +26,33 @@ export default function Write() {
     return (
         <div>
             <Header></Header>
-            
-            <div classname = 'topicbutton'>
+
+            <div className = 'topicbutton'>
                 오늘의 주제 :  
                 <Button onClick={() => handleTopicChange('버튼1')}>버튼1</Button>
                 <Button onClick={() => handleTopicChange('버튼2')}>버튼2</Button>
                 <Button onClick={() => handleTopicChange('버튼3')}>버튼3</Button>
-            </div>
-            {topic && <div style={{ fontSize: '36px' }}>Topic: {topic}</div>}
 
-            <div className='center'>
+            </div>
+
+            <div className='rectangle center'>
+
+                {topic && <div style={{ fontSize: '30px', alignItems: 'center' }} className='Topic'>{topic}</div>}
+
                 <div className='inputbox'>
                     <textarea 
                         value={content} 
                         onChange={handleInputChange}
-                        style = {{fontSize: '36px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100'}} />
-                </div>
-
-                <div className='submitbutton'>
-                    <Button onClick={handleSubmit}>전송</Button> 
+                        style = {{fontSize: '30px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px', width: '600px', zIndex: 2, border: 'none', backgroundColor: '#D9D9D9'}} />
                 </div>
 
             </div>
+
+            <div className='submitbutton'>
+                <Button onClick={handleSubmit}>전송</Button> 
+            </div>
+
         </div>
+
     );
-}
+};
