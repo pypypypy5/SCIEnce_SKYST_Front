@@ -46,7 +46,6 @@ export default function Read(){
                 <div className='main-content'>
                    { post.content}
                 </div>
-
                 <Buttons></Buttons>
 
 
