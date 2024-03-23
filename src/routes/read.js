@@ -1,7 +1,6 @@
 import Header from '../component/Header.js';
 import './read.css'
-import thumbsup from './images/thumbsup.png'
-import heart from './images/heart.png'
+import Buttons from './ReadButtons.js'
 
 
 export default function Read(){
@@ -19,12 +18,9 @@ export default function Read(){
                     {/*main content*/}
                 </div>
 
-                <div className='buttons'>
-                        <img src={thumbsup} className='imagebutton'/>
-                        
-                        <img src={heart} className='imagebutton'/>
-                    
-                </div>
+                <Buttons></Buttons>
+
+
             </div>
         </div>
     )
