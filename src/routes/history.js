@@ -8,8 +8,14 @@ import cookie from 'react-cookies';
 export default function History() {
 
     return (
+        <div>
             <Header></Header>
 
+            <div className='title'> 
+                History
+            </div>
 
+
+        </div>
     );
 };

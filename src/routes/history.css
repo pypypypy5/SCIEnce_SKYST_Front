@@ -5,6 +5,11 @@
     margin: 60px;
   }
   
+.title{
+  font-size: 45px;
+  margin-top: 50px;
+  margin-left: max(65px, 15%);
+}
   .inputbox {
     padding: 10px;
 
