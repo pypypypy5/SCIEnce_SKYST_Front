@@ -1,5 +1,8 @@
 import thumbsup from './images/thumbsup.png'
 import heart from './images/heart.png'
+import thumbsupSelected from './images/thumbsupSelected.png'
+import heartSelected from './images/heartSelected.png'
+
 import './readbuttons.css'
 import React, { useState } from 'react';
 
@@ -54,11 +57,11 @@ export default function Buttons(){
         return (
             <div className = 'buttons'>
                 <div className = 'image-text-wrapper'>
-                    <img src={thumbsup} class = 'votable-image' onClick={handleThumbsupClick}/>
+                    <img src={thumbsupMode ? thumbsupSelected : thumbsup} class = 'votable-image' onClick={handleThumbsupClick}/>
                 </div>
 
                 <div className = 'image-text-wrapper'>
-                    <img src={heart} class='votable-image' onClick={handleHeartClick}/>
+                    <img src={heartMode ? heartSelected : heart} class='votable-image' onClick={handleHeartClick}/>
                 </div>
             </div>
         )
