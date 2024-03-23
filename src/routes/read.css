@@ -29,11 +29,15 @@
     align-items: center;
   }
 
-  .imagebutton {
+  .imagebuttonable {
     width: 60px;
     height: auto;
 
     margin: 30px;
+  }
+
+  .imagebuttondisable {
+
   }
 
   
