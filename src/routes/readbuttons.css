@@ -1,9 +1,11 @@
-.buttons{
+.buttons {
     display: grid;
     grid-auto-flow: column; /* 그리드 아이템이 세로가 아닌 가로로 배치되도록 설정 */
-    justify-content: center; /* 가로 방향 가운데 정렬 */
-    align-items: center; /* 세로 방향 가운데 정렬 */
-}
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
 
 .image-text-wrapper{
     display: grid;

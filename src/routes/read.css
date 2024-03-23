@@ -21,23 +21,4 @@
     font-size: 30px;
     margin: 30px
   }
-
-  .buttons {
-    display: flex;
-    margin: 30px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .imagebuttonable {
-    width: 60px;
-    height: auto;
-
-    margin: 30px;
-  }
-
-  .imagebuttondisable {
-
-  }
-
   
