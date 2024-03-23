@@ -1,6 +1,7 @@
 import Header from '../component/Header.js';
 import './read.css'
 import Buttons from './ReadButtons.js'
+import NextButton from './images/next.png'
 
 
 export default function Read(){
@@ -8,18 +9,26 @@ export default function Read(){
         <div>
             <Header></Header>
 
-            <div className='rectangle' style={{marginTop: Math.max(50, 10 * window.innerHeight / 100) + 'px'}}>
-                <div className='topic'>
-                    Topic : {/*topic*/}
+            <div className='center-read'>
+                
+                <img src={NextButton} style={{width: Math.max(50)}} />
+
+                <div className='rectangle-read'>
+                    <div className='topic'>
+                        Topic : {/*topic*/}
+                    </div>
+
+                    <div className='main-content'>
+                        dfasdfjioadsfjooasjdfojasdfoasdjfo-asdfjoasdfojasdfojdasfojdsfojdsfojdfsojdsf
+                        {/*main content*/}
+                    </div>
+
+                    <Buttons></Buttons>
+
+
                 </div>
 
-                <div className='main-content'>
-                    df
-                    {/*main content*/}
-                </div>
-
-                <Buttons></Buttons>
-
+                <img src={NextButton} style={{width: Math.max(50)}} />
 
             </div>
         </div>
