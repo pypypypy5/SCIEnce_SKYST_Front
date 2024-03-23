@@ -1,0 +1,38 @@
+.center {
+    display: grid; 
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+  }
+  
+  .inputbox {
+    padding: 10px;
+
+  }
+
+  .submitbutton {
+    margin-top: 10px;
+    display: grid;
+    justify-content: center;
+  }
+
+  .topicbutton {
+    margin-top: 70px;
+    margin-left: 35%;
+  }
+
+  .Topic {
+    margin: 25px;
+    z-index: 2;
+  }
+
+  .rectangle {
+    padding: 35px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 30px;
+    background-color: #D9D9D9;
+    opacity: 100%;
+    z-index: 1;
+  }
+

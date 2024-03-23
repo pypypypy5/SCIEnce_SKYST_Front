@@ -8,6 +8,7 @@ import Read from './routes/read.js';
 import Header from './component/Header.js';
 import Write from './routes/write.js';
 import Login from './routes/login.js';
+import History from './routes/history.js'
 
 
 const root = document.getElementById('root');
@@ -21,6 +22,7 @@ ReactDOM.createRoot(root).render(
                 <Route path='read' element={<Read/>}/>
                 <Route path='write' element={<Write/>}/>
                 <Route path='login' element={<Login/>}/>
+                <Route path='history' element={<History/>}/>
             </Routes>
         </BrowserRouter>
     </div>

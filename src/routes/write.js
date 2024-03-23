@@ -36,7 +36,7 @@ export default function Write() {
             <Header></Header>
 
             <div className = 'topicbutton'>
-                오늘의 주제 :  
+                오늘의 주제 :
                 <Button onClick={() => handleTopicChange('버튼1')}>버튼1</Button>
                 <Button onClick={() => handleTopicChange('버튼2')}>버튼2</Button>
                 <Button onClick={() => handleTopicChange('버튼3')}>버튼3</Button>
@@ -57,9 +57,8 @@ export default function Write() {
             </div>
 
             <div className='submitbutton'>
-                <Button onClick={handleSubmit}>전송</Button> 
+                <Button onClick={handleSubmit} className = 'submitbutton'>전송</Button> 
             </div>
-
         </div>
 
     );
