@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import {Button} from 'semantic-ui-react';
 import './write.css'
 import Header from "../component/Header";
+import axios from 'axios';
+import cookie from 'react-cookies';
 
+const date = new Date();
+const year = date.getFullYear(), month = date.getMonth() + 1, day = date.getDay();
+const dateString = `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`;
 export default function Write() {
     const [content, setContent] = useState('');
     const [topic, setTopic] = useState('');
@@ -19,8 +24,11 @@ export default function Write() {
         // 여기에 전송하는 로직을 추가하세요.
         console.log('전송될 내용:', content);
         console.log('전송될 주제:', topic);
-        // 전송 후 필요한 작업을 수행하세요.
-        // 예: 서버로 전송하고 성공 또는 실패 메시지를 표시하는 등
+        
+        axios.post('http://localhost:8888/posts/write',  {accessToken: cookie.load('accessToken'), topic: topic, content: content, author: 'qdrptd', date: dateString})
+        .then((res)=>{alert("글이 성공적으로 업로드되었습니다.")})
+        .catch((e)=>{throw new Error(e)})
+        
     };
 
     return (
