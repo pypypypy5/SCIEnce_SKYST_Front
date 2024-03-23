@@ -13,7 +13,7 @@ export default function Signup() {
 
     const handleRegister = async () => {
         // 여기서 서버로 id와 password를 전송하는 로직을 작성하세요.
-        await axios.post('http://localhost:8888/auth/register', {username: id, password: password}).then((res)=>{
+        await axios.post('http://34.229.241.108:8888/auth/register', {username: id, password: password}).then((res)=>{
             alert('가입에 성공했습니다!');
             nav('/login');
         }).catch((e)=>{

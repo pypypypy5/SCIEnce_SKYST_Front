@@ -30,7 +30,7 @@ export default function Read(){
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios.post(`http://localhost:8888/posts/next`, {date: dateString}, {headers: {'accesstoken': accesstoken}}).then((res)=>{console.log(res.data); return(res)})
+            const response = await axios.post(`http://34.229.241.108:8888/posts/next`, {date: dateString}, {headers: {'accesstoken': accesstoken}}).then((res)=>{console.log(res.data); return(res)})
             console.log(response.data)
             setPost(response.data.data)
             
@@ -67,7 +67,7 @@ export default function Read(){
             </div>
             <div className='nextButton'>
             <Button onClick={async ()=>{
-                const response = await axios.post(`http://localhost:8888/posts/next`, {date: dateString}, {headers: {'accesstoken': accesstoken}}).then((res)=>{console.log(res.data); return(res)})
+                const response = await axios.post(`http://34.229.241.108:8888/posts/next`, {date: dateString}, {headers: {'accesstoken': accesstoken}}).then((res)=>{console.log(res.data); return(res)})
                 console.log(response.data)
                 setPost(response.data.data)
             }}

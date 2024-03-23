@@ -12,7 +12,7 @@ export default function History() {
     useEffect(()=>{
         const fetchData = async () => {
             try {
-              const response = await axios.post('http://localhost:8888/posts/best', {},  {headers: {'accesstoken': accesstoken}}).then((res)=>{console.log(res); return(res);})
+              const response = await axios.post('http://34.229.241.108:8888/posts/best', {},  {headers: {'accesstoken': accesstoken}}).then((res)=>{console.log(res); return(res);})
               const data = response.data.data;
               setPost(data);
             } catch (error) {

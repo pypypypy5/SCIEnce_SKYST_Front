@@ -39,7 +39,7 @@ export default function Write() {
         console.log('전송될 내용:', content);
         console.log('전송될 주제:', topic);
         if (topic !== '' || content !== ''){
-            axios.post('http://localhost:8888/posts/write',  {topic: topic, content: content, author: 'qdrptd', date: dateString}, {headers: {'accesstoken': accesstoken}})
+            axios.post('http://34.229.241.108:8888/posts/write',  {topic: topic, content: content, author: 'qdrptd', date: dateString}, {headers: {'accesstoken': accesstoken}})
             .then((res)=>{alert("글이 성공적으로 업로드되었습니다.")})
             .catch((e)=>{throw new Error(e)})
         } else {

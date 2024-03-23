@@ -15,7 +15,7 @@ export default function Header(){
     useEffect(()=>{
         if(!accesstoken){return;}
         async function fetchUsername(){
-            const u = await axios.post('http://localhost:8888/auth/protected', {}, {headers: {'accesstoken': accesstoken}}).then((res)=>{console.log(res.data.user.username); return res.data.user.username});
+            const u = await axios.post('http://34.229.241.108:8888/auth/protected', {}, {headers: {'accesstoken': accesstoken}}).then((res)=>{console.log(res.data.user.username); return res.data.user.username});
            setUsername(u);
         }
         fetchUsername();

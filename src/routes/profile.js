@@ -27,14 +27,14 @@ export default function Profile() {
     useEffect(() => {
         if(!accesstoken){return;}
         async function fetchUsername(){
-            const u = await axios.post('http://localhost:8888/auth/protected', {}, {headers: {'accesstoken': accesstoken}}).then((res)=>{console.log(res.data.user.username); return res.data.user.username});
+            const u = await axios.post('http://34.229.241.108:8888/auth/protected', {}, {headers: {'accesstoken': accesstoken}}).then((res)=>{console.log(res.data.user.username); return res.data.user.username});
            setUsername(u);
            
         }
         fetchUsername();
         const fetchData = async () => {
           try {
-            const response = await axios.post('http://localhost:8888/posts/dashboard', {username: username}, {headers: {'accesstoken': accesstoken}}).then((res)=>{console.log(res); return(res);})
+            const response = await axios.post('http://34.229.241.108:8888/posts/dashboard', {username: username}, {headers: {'accesstoken': accesstoken}}).then((res)=>{console.log(res); return(res);})
             const data = response.data.data;
             setPost(data);
           } catch (error) {
@@ -44,7 +44,7 @@ export default function Profile() {
         fetchData();
         const fetchThanklist = async () => {
             try {
-              const response = await axios.post('http://localhost:8888/posts/archive', {username: username}, {headers: {'accesstoken': accesstoken}}).then((res)=>{console.log("ㅁㄴㅇㄹ", res.data); return(res);})
+              const response = await axios.post('http://34.229.241.108:8888/posts/archive', {username: username}, {headers: {'accesstoken': accesstoken}}).then((res)=>{console.log("ㅁㄴㅇㄹ", res.data); return(res);})
               const data = response.data.data;
               setThanklist(data);
             } catch (error) {

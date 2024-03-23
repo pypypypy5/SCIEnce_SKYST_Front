@@ -6,13 +6,15 @@ import axios from 'axios';
 import cookie from 'react-cookies';
 import { useNavigate } from 'react-router-dom';
 
+
+
 export default function Login() {
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
     const nav = useNavigate();
     const handleLogin = async () => {
         // 여기서 서버로 id와 password를 전송하는 로직을 작성하세요.
-        await axios.post('http://localhost:8888/auth/login', {username: id, password: password}).then((res)=>{
+        await axios.post('http://34.229.241.108:8888/auth/login', {username: id, password: password}).then((res)=>{
             cookie.save('accesstoken', res.data.token);
             alert('로그인에 성공했습니다!');
             window.location.reload();
