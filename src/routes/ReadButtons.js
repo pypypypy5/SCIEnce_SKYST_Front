@@ -40,7 +40,7 @@ export default function Buttons(){
     };
 
     
-    if (1>2) { /* 만일 currentTime이 너무 늦어서 글을 평가하면 안되는 경우 : */
+    if (1<2) { /* 만일 currentTime이 너무 늦어서 글을 평가하면 안되는 경우 : */
         return (
             <div className = 'buttons'>
                 <div className = 'image-text-wrapper'>

@@ -12,10 +12,10 @@
 
 .center-read {
   margin-top: 75px;
-  margin-left: max(75px, 20%);
-  margin-right: max(75px, 20%);
+  margin-left: max(25px, 10%);
+  margin-right: max(25px, 10%);
   display: grid; /* 요소를 인라인 블록으로 표시 */
-  grid-template-columns: 50px auto 50px;
+  grid-template-columns: 50px auto 50px;  
   align-items: center;
 }
 
@@ -30,6 +30,7 @@
 
   .main-content {
     font-size: 30px;
-    margin: 30px
+    margin: 30px;
+    line-height: 1.5;
   }
   
