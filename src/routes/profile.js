@@ -35,10 +35,10 @@ export default function Profile() {
             <div>
             <div classname = 'Mryourwriting'>
                 Username님, 당신의 글귀들은 지금까지 
-                
             {
                 post.map((d) => {return d.topic})
             }
+                
                 {/* !!!!!!!!!!유저네임 불러오는 로직 추가 필요!!!!!!!!!!*/}
             </div>
     
