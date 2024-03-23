@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Button} from 'semantic-ui-react';
 import './write.css'
+import Header from "../component/Header";
 
 export default function Write() {
     const [content, setContent] = useState('');
@@ -24,6 +25,8 @@ export default function Write() {
 
     return (
         <div>
+            <Header></Header>
+            
             <div classname = 'topicbutton'>
                 오늘의 주제 :  
                 <Button onClick={() => handleTopicChange('버튼1')}>버튼1</Button>

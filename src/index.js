@@ -6,6 +6,7 @@ import 'semantic-ui-css/semantic.min.css';
 import Main from './routes/main.js';
 import Read from './routes/read.js';
 import Header from './component/Header.js';
+import Write from './routes/write.js';
 
 
 
@@ -18,6 +19,7 @@ ReactDOM.createRoot(root).render(
             <Routes>
                 <Route path='' element={<Main/>}/>
                 <Route path='read' element={<Read/>}/>
+                <Route path='write' element={<Write/>}/>
             </Routes>
         </BrowserRouter>
     </div>
